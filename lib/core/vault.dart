@@ -6,7 +6,6 @@ import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:photo_manager/photo_manager.dart';
 import 'crypto_box.dart';
 
 const _mediaWorkerThreshold = 256 * 1024;
@@ -97,10 +96,7 @@ class Vault extends ChangeNotifier {
       cache: Directory('${temp.path}/calcvault_preview'),
     );
     await vault.root.create(recursive: true);
-    await vault.purgeCache(clearGalleryCache: false);
-    vault.galleryCacheCleanup = PhotoManager.clearFileCache().catchError(
-      (Object _) {},
-    );
+    vault.galleryCacheCleanup = Future<void>.value();
     final saved = await vault.storage.read(key: 'calcvault_config_v1');
     if (saved != null) {
       vault._config = jsonDecode(saved);
@@ -416,9 +412,7 @@ class Vault extends ChangeNotifier {
     }
     await cache.create(recursive: true);
     if (clearGalleryCache) {
-      try {
-        await PhotoManager.clearFileCache();
-      } catch (_) {}
+      // Gallery cache cleanup no-op when using native system photo picker
     }
   }
 

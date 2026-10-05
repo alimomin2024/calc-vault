@@ -12,7 +12,6 @@ import 'package:calc_vault/ui/calculator_screen.dart';
 import 'package:calc_vault/ui/vault_screen.dart';
 import 'package:calc_vault/ui/security_screen.dart';
 import 'package:calc_vault/ui/record_editor.dart';
-import 'package:calc_vault/ui/viewer.dart';
 
 void main() {
   testWidgets('Render local app previews using sample data', (tester) async {
