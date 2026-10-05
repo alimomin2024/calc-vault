@@ -1,7 +1,7 @@
 name: calc_vault
 description: 'CalcVault: Secret Calculator & Photo Locker. An offline encrypted vault.'
 publish_to: none
-version: 1.0.0+1
+version: 1.0.1+2
 environment:
   sdk: ^3.12.2
 dependencies:
