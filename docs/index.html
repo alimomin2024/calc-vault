@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CalcVault: Secret Calculator</title>
+  <style>
+    :root {
+      --bg: #0D0E12;
+      --card-bg: #15171E;
+      --text-main: #F4F4F6;
+      --text-muted: #9E9EA8;
+      --accent: #A68A56;
+      --accent-light: #C2A56E;
+      --border: #242630;
+      --green: #2E6B4D;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Plus Jakarta Sans", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 48px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+    }
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(166, 138, 86, 0.15);
+      color: var(--accent-light);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      border: 1px solid rgba(166, 138, 86, 0.3);
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+    .meta {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      color: var(--accent-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p {
+      color: #D1D5DB;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    ul {
+      margin-left: 24px;
+      margin-bottom: 18px;
+      color: #D1D5DB;
+      font-size: 15px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .highlight-card {
+      background: rgba(166, 138, 86, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 20px 0;
+    }
+    .highlight-card p {
+      margin: 0;
+      color: #E2E8F0;
+      font-weight: 500;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    th {
+      background-color: rgba(255, 255, 255, 0.04);
+      color: var(--accent-light);
+      font-weight: 600;
+    }
+    td {
+      color: #D1D5DB;
+    }
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    a {
+      color: var(--accent-light);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 24px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="badge">
+        <span>🔒</span> 100% On-Device & Offline Privacy
+      </div>
+      <h1>Privacy Policy</h1>
+      <div class="meta">
+        <strong>CalcVault: Secret Calculator</strong> &bull; Effective Date: October 5, 2026
+      </div>
+    </div>
+
+    <div class="highlight-card">
+      <p><strong>Core Guarantee:</strong> CalcVault does not collect, transmit, share, or sell your personal data. The app operates 100% offline with zero network permissions in release builds. Everything is encrypted locally on your physical device.</p>
+    </div>
+
+    <h2>1. Overview & Commitment</h2>
+    <p><strong>CalcVault: Secret Calculator & Photo Locker</strong> ("CalcVault", "we", "our") is designed from the ground up with a strict privacy-first, zero-knowledge architecture. Your photos, videos, confidential documents, and passwords never leave your phone.</p>
+
+    <h2>2. Data Handled Exclusively On-Device</h2>
+    <p>All operations are performed locally using hardware-accelerated cryptographic primitives:</p>
+    <ul>
+      <li><strong>Master & Decoy PINs:</strong> Your PINs are never stored in plaintext. They derive 256-bit encryption keys through 120,000 PBKDF2-HMAC-SHA256 iterations stored in your device's hardware-backed Keystore / Secure Enclave.</li>
+      <li><strong>AES-256-GCM Encryption:</strong> Every file and folder is encrypted locally with an authenticated 256-bit key and fresh 96-bit random nonce.</li>
+      <li><strong>In-Memory Decryption:</strong> Media files decrypt purely in temporary volatile RAM while being viewed. No unencrypted copies are ever cached on your permanent internal storage.</li>
+    </ul>
+
+    <h2>3. Device Permissions & Purpose</h2>
+    <p>CalcVault requests only minimal permissions required to provide vault functionality:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Usage</th>
+          <th>Transmission</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Photos / Media Access</strong></td>
+          <td>Enables you to select and import photos or videos into the encrypted vault.</td>
+          <td><strong>None (Offline)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Camera (Optional)</strong></td>
+          <td>Used solely for the opt-in Break-In Intruder Selfie feature to photograph unauthorized PIN attempts.</td>
+          <td><strong>None (Offline)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Microphone (Optional)</strong></td>
+          <td>Used solely if you choose to record encrypted private audio memos inside the app.</td>
+          <td><strong>None (Offline)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Sensors / Motion</strong></td>
+          <td>Detects when your phone is turned face-down to immediately trigger the Panic Flip lock.</td>
+          <td><strong>None (Offline)</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Zero Third-Party Tracking or Ads</h2>
+    <p>CalcVault contains:</p>
+    <ul>
+      <li><strong>NO Advertising SDKs:</strong> Zero commercial advertising networks (no AdMob, Unity, AppLovin).</li>
+      <li><strong>NO Analytics or Telemetry:</strong> No Google Analytics, Firebase, Facebook SDK, or crash aggregators.</li>
+      <li><strong>NO Internet Permission:</strong> The release build completely removes <code>android.permission.INTERNET</code>. The operating system prevents the app from opening network sockets.</li>
+    </ul>
+
+    <h2>5. Security & Anti-Snoop Protection</h2>
+    <p>The app enforces Android's <code>FLAG_SECURE</code> window flag, preventing Android from taking screenshots, recording video of the screen, or saving snapshots in the recent app switcher view.</p>
+    <p>An independent Decoy PIN allows you to open a separate, isolated decoy vault containing innocuous files if forced to unlock the device under duress.</p>
+
+    <h2>6. Data Retention & Deletion</h2>
+    <p>You have full autonomy over your files. You can delete items or folders at any time. When you uninstall CalcVault from your device, all encrypted files, keys, and settings are permanently erased by the operating system.</p>
+
+    <h2>7. Children's Privacy (COPPA Compliance)</h2>
+    <p>CalcVault does not collect any personal information from anyone, including children under 13. The application is completely offline, non-commercial, and safe for all audiences.</p>
+
+    <h2>8. Contact & Inquiries</h2>
+    <p>If you have any questions regarding this Privacy Policy, you may contact the development team at:</p>
+    <p><strong>Email:</strong> <a href="mailto:support@calcvault.app">support@calcvault.app</a><br>
+    <strong>GitHub:</strong> <a href="https://github.com/alimomin2024/calc-vault" target="_blank" rel="noopener">github.com/alimomin2024/calc-vault</a></p>
+
+    <div class="footer">
+      &copy; 2026 CalcVault. All rights reserved. Built with privacy and zero-knowledge encryption.
+    </div>
+  </div>
+</body>
+</html>
